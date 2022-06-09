@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*top-contents（トップページの日本地図が入った１カラムのブロック）
+---------------------------------------------------------------------------*/
+#top-contents {
+	background: url(../images/bg1.jpg) no-repeat center bottom / 100%;	/*背景画像の読み込み*/
+	padding-bottom: 150px;	/*下に余白を作る。背景画像の家並みと日本地図が重ならないようにする為。*/
+}
+
+/*横並びテキストメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-text {
+	position: relative;z-index: 1;
+	padding: 0 3% 30px;	/*上、左右、下への余白*/
+	font-size: 24px;	/*文字サイズ*/
+	width: 80%;			/*この指定がないと、北海道のリンクが反応しなくなる可能性があるので必ず残して下さい。*/
+}
+
+/*写真入りメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-photo {
+	position: relative;z-index: 1;
+	line-height: 1.5;	/*行間*/
+	padding: 0 3% 30px;	/*上、左右、下への余白*/
+	text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff;
+}
+/*ブロック全体（※トップページで使っているブロックの幅の再指定）*/
+#top-contents #menu-photo {
+	width: 50%;
+}
+/*１個あたり*/
+#menu-photo li {
+	margin-bottom: 10px;
+	color: #00b293;			/*文字サイズ*/
+	padding-right: 300px;	/*背景画像の分だけ余白をとる*/
+	padding: 3%;			/*ボックス内の余白*/
+	border-radius: 4px;		/*角丸の指定*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+	background: linear-gradient(#fff, #f5f5f5);/*背景グラデーション*/
+}
+/*大文字*/
+#menu-photo li span {
+	display: block;
+	font-size: 36px;	/*文字サイズ*/
+}
+/*グローバル*/
+#menu-photo .global {
+	background: #fff;
+	background: url(../images/global_image.png) no-repeat right center / 300px,linear-gradient(#fff, #f5f5f5);
+}
+/*テレワーク*/
+#menu-photo .telework {
+	background: #fff;
+	background: url(../images/telework_image.jpeg) no-repeat right center / 300px,linear-gradient(#fff, #f5f5f5);
+}
+
+/*日本地図
+---------------------------------------------------------------------------*/
+/*地図全体を囲むブロック*/
+#map {
+	position: relative;
+	font-size: 12px;	/*文字サイズ*/
+	height: 800px;		/*ブロックの高さ*/
+	width: 100%;		/*ブロックの幅*/
+	margin-top: -400px;	/*地図を少し上にずらす指定*/
+}
+#map a {
+	display: block;text-decoration: none;position: absolute;text-align: center;
+	width: 7.5%;
+	height: 7%;
+	color: #000;	/*文字色*/
+	box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+/*マウスオン時*/
+#map a:hover {
+	opacity: 0.5;	/*透明度50%にする*/
+	box-shadow: none;
+}
+
+/*九州ブロック-------------------------------*/
+.kyusyu a {background: #f4c9e3;}
+
+.area47 {left: 1%;bottom: 0px;}
+.area46 {left: 1%;bottom: 12%;width: 15.5% !important;}
+.area43 {left: 1%;bottom: 20%;}
+.area45 {left: 9%;bottom: 20%;}
+.area42 {left: 1%;bottom: 28%;}
+.area44 {left: 9%;bottom: 28%;}
+.area41 {left: 1%;bottom: 36%;}
+.area40 {left: 9%;bottom: 36%;}
+
+/*四国ブロック-------------------------------*/
+.shikoku a {background: #dec3f4;}
+
+.area39 {left: 19%;bottom: 12%;}
+.area38 {left: 27%;bottom: 12%;}
+.area37 {left: 19%;bottom: 20%;}
+.area36 {left: 27%;bottom: 20%;}
+
+/*中国ブロック-------------------------------*/
+.cyugoku a {background: #f4c7c3;}
+
+.area35 {left: 19%;bottom: 30%;height: 15% !important;}
+.area34 {left: 27%;bottom: 30%;}
+.area33 {left: 35%;bottom: 30%;}
+.area32 {left: 27%;bottom: 38%;}
+.area31 {left: 35%;bottom: 38%;}
+
+/*関西ブロック-------------------------------*/
+.kansai a {background: #f7daba;}
+
+.area28 {left: 43%;bottom: 30%;height: 15% !important;}
+.area26 {left: 51%;bottom: 38%;}
+.area25 {left: 59%;bottom: 38%;}
+.area27 {left: 51%;bottom: 30%;}
+.area29 {left: 59%;bottom: 30%;}
+.area24 {left: 59%;bottom: 22%;}
+.area30 {left: 51%;bottom: 22%;}
+
+/*中部ブロック-------------------------------*/
+.tyubu a {background: #f7f1ad;}
+
+.area18 {left: 59%;bottom: 46%;}
+.area17 {left: 59%;bottom: 54%;}
+.area16 {left: 67%;bottom: 46%;}
+.area21 {left: 67%;bottom: 38%;}
+.area23 {left: 67%;bottom: 30%;}
+.area15 {left: 67%;bottom: 54%;width: 15.5% !important;}
+.area20 {left: 75%;bottom: 46%;}
+.area19 {left: 75%;bottom: 38%;}
+.area22 {left: 75%;bottom: 30%;}
+
+/*関東ブロック-------------------------------*/
+.kanto a {background: #cbefcf;}
+
+.area14 {left: 83%;bottom: 30%;}
+.area13 {left: 83%;bottom: 38%;}
+.area11 {left: 83%;bottom: 46%;}
+.area10 {left: 91%;bottom: 46%;}
+.area09 {left: 91%;bottom: 38%;}
+.area08 {left: 91%;bottom: 30%;}
+.area12 {left: 91%;bottom: 22%;}
+
+/*東北ブロック-------------------------------*/
+.tohoku a {background: #bae6f7;}
+
+.area07 {left: 83%;bottom: 54%;width: 15.5% !important;}
+.area06 {left: 83%;bottom: 62%;}
+.area04 {left: 91%;bottom: 62%;}
+.area05 {left: 83%;bottom: 70%;}
+.area03 {left: 91%;bottom: 70%;}
+.area02 {left: 83%;bottom: 78%; width: 15.5% !important;}
+
+/*北海道ブロック-------------------------------*/
+.area01 a {background: #b9c6f9;}
+
+.area01 a {left: 83%;bottom: 86%;width: 15.5% !important;height: 10% !important;}
+
+/*トップページの都道府県プルダウン（小さな端末用）
+---------------------------------------------------------------------------*/
+#map-select {
+	display: none;
+}
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+
+/*横並びテキストメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-text {
+	font-size: 16px;
+}
+/*１個あたり*/
+#menu-text li {
+	background: url(../images/arrow1.png) no-repeat left 8px / 15px;	/*丸いアイコン*/
+	padding-left: 20px;	/*アイコン画像の分だけ余白をとる*/
+}
+
+/*日本地図
+---------------------------------------------------------------------------*/
+/*地図全体を囲むブロック*/
+#map {
+	margin-top: -360px;
+}
+
+}
+
+
+
+/*画面幅700px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:700px){
+
+/*top-contents（トップページの日本地図が入った１カラムのブロック）
+---------------------------------------------------------------------------*/
+#top-contents {
+	padding-bottom: 30px;
+}
+
+/*横並びテキストメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-text {
+	width: auto;
+}
+
+/*写真入りメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-photo {
+	width: auto !important;
+}
+
+/*横並びテキストメニュー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+#menu-text {
+	display: none;	/*スペースが狭くなるので非表示にする*/
+}
+
+/*日本地図
+---------------------------------------------------------------------------*/
+/*地図全体を囲むブロック*/
+#map {
+	display: none;	/*スペースが狭くなるので非表示にする*/
+}
+
+/*トップページの都道府県プルダウン（小さな端末用）
+---------------------------------------------------------------------------*/
+#map-select {
+	display: block;
+	padding-bottom: 30px;
+}
+#map-select select {
+	font-size: 24px;
+	display: block;margin: 0 auto;
+}
+
+}
